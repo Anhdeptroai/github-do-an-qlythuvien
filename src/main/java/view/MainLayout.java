@@ -49,7 +49,7 @@ public class MainLayout extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("MainLayout"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1100, 800));
+        setPreferredSize(new java.awt.Dimension(1210, 800));
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 255));
 
@@ -215,6 +215,14 @@ public class MainLayout extends javax.swing.JFrame {
         btnThongKe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icontk.png"))); // NOI18N
         btnThongKe.setText("Thống kê");
+        btnThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnThongKeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnThongKeMouseExited(evt);
+            }
+        });
         btnThongKe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnThongKeActionPerformed(evt);
@@ -293,7 +301,7 @@ public class MainLayout extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnhienthi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnhienthi, javax.swing.GroupLayout.DEFAULT_SIZE, 914, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -401,6 +409,14 @@ public class MainLayout extends javax.swing.JFrame {
     private void btnThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKeActionPerformed
         showPanel(new ThongKe());
     }//GEN-LAST:event_btnThongKeActionPerformed
+
+    private void btnThongKeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnThongKeMouseEntered
+        btnThongKe.setBackground(Color.white);
+    }//GEN-LAST:event_btnThongKeMouseEntered
+
+    private void btnThongKeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnThongKeMouseExited
+        btnThongKe.setBackground(Color.getColor("control"));
+    }//GEN-LAST:event_btnThongKeMouseExited
 
     /**
      * @param args the command line arguments
